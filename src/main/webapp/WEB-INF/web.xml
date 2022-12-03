@@ -1,0 +1,41 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <!--  配置一个servlet  -->
+  <!--  servlet的配置  -->
+  <servlet>
+    <!--  servlet的内部名称，自定义。尽量有意义  -->
+    <servlet-name>PositionDataSourceServlet</servlet-name>
+    <!--  servlet的类全名： 包名+简单类名  -->
+    <servlet-class>com.example.paging.PositionDataSourceServlet</servlet-class>
+  </servlet>
+  <!--  servlet的映射配置  -->
+  <servlet-mapping>
+    <!--  servlet的内部名称，一定要和上面的内部名称保持一致！！  -->
+    <servlet-name>PositionDataSourceServlet</servlet-name>
+    <!--  servlet的映射路径（访问servlet的名称）  -->
+    <url-pattern>/pds.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>PageKeyedDataSourceServlet</servlet-name>
+    <servlet-class>com.example.paging.PageKeyedDataSourceServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PageKeyedDataSourceServlet</servlet-name>
+    <url-pattern>/pkds.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ItemKeyedDataSourceServlet</servlet-name>
+    <servlet-class>com.example.paging.ItemKeyedDataSourceServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ItemKeyedDataSourceServlet</servlet-name>
+    <url-pattern>/ikds.do</url-pattern>
+  </servlet-mapping>
+  <listener>
+    <listener-class>com.example.paging.ServerStartupListener</listener-class>
+  </listener>
+</web-app>
