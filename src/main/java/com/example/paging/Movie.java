@@ -2,6 +2,8 @@ package com.example.paging;
 
 
 public class Movie {
+    private int no;
+
     private int id;
 
     private String url;
@@ -11,6 +13,14 @@ public class Movie {
     private String title;
 
     private String rate;
+
+    public int getNo() {
+        return no;
+    }
+
+    public void setNo(int no) {
+        this.no = no;
+    }
 
     public int getId() {
         return id;

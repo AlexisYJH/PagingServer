@@ -6,6 +6,12 @@ https://blog.csdn.net/qq_41701956/article/details/126693711
 
 用IDEA创建一个Maven项目并写出第一个servlet
 https://blog.csdn.net/weixin_43654123/article/details/120824388
+1. IDEA创建Maven的web项目
+2. 添加servlet依赖
+3. 部署Tomcat
+    Add New Configuration——Tomcat Server Local——(添加Tomcat)——Fix
+4. 第一个servlet
+    java——new——Servlet
 
 maven库，添加依赖
 https://mvnrepository.com/
@@ -22,3 +28,6 @@ Servlet：
 
 - ItemKeyedDataSourceServlet
 //http://localhost:8080/pagingserver/ikds.do?since=0&pagesize=8
+
+- CoroutineDataSourceServlet
+//http://localhost:8080/pagingserver/cds.do?since=0&pagesize=8

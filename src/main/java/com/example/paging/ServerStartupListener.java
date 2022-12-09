@@ -18,7 +18,7 @@ public class ServerStartupListener implements ServletContextListener{
     @Override
     public void contextInitialized(ServletContextEvent servletContextEvent) {
         //构建一个内存数据集合
-        URL url = getClass().getClassLoader().getResource("data.json");
+        URL url = getClass().getClassLoader().getResource("movies.json");
         File file = new File(url.getFile());
         String json = Utils.loadJson(file.getAbsolutePath());
         System.out.println(TAG + json);
@@ -27,6 +27,7 @@ public class ServerStartupListener implements ServletContextListener{
         for (int i = 0; i < subjects.size(); i++) {
             JsonObject element = (JsonObject) subjects.get(i);
             Movie movie = new Movie();
+            movie.setNo(element.get("no").getAsInt());
             movie.setId(element.get("id").getAsInt());
             movie.setTitle(element.get("title").getAsString());
             movie.setRate(element.get("rate").getAsString());

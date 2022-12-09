@@ -35,6 +35,14 @@
     <servlet-name>ItemKeyedDataSourceServlet</servlet-name>
     <url-pattern>/ikds.do</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>CoroutineDataSourceServlet</servlet-name>
+    <servlet-class>com.example.paging.CoroutineDataSourceServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CoroutineDataSourceServlet</servlet-name>
+    <url-pattern>/cds.do</url-pattern>
+  </servlet-mapping>
   <listener>
     <listener-class>com.example.paging.ServerStartupListener</listener-class>
   </listener>
